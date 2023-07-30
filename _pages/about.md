@@ -16,18 +16,13 @@ Like many engineers, I have certain projects I want to display. To do so, this s
 
 Such portfolios are very important, as they can provide deep insight into what exactly I am interested in and how I approach and tackle various problems. To learn more about engineering portfolios make sure to check out this [Indeed blog](https://www.indeed.com/career-advice/career-development/what-is-portfolio-engineering). To navigate to my portfolios, simply click the portfolio navigation button at the top of the screen and select which project you would like to view.
 
-Getting started
+My Research
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+I have always been someone who is constantly looking for new information. My interests are random and varied, and often lead me down wild paths. For example, my interest in geography led me to be able to name every country and its capital, my interest in the military led me on a path of restructuring my life around discipline and accountability, my interest in politics/economics led me to writing a 4000 word research paper on Rwanda, etc. Since the main focus of this page is engineering and speed, my research regarding these topics can be found under the research tab. However, for my more whimsical interests, check out my blog posts where the endless waterfall of information in my mind that is at the same time useful and useless is collected and recorded!
 
-Site-wide configuration
+Experiences
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+For me, being an engineer is all about being practical. My favorite story regarding engineering is actually an excerpt from *The Scientific Blacksmith* by Mortimer E. Cooley, the founder of the Mechanical Engineering department at the University of Michigan. In it, he describes how the first class he taught in MechE had six students in it. After showing them how to light and heat up a forging furnace, he asked the students to retrieve a piece of wrought iron from a bucket of scraps in the back of the classroom. After a few minutes, the students couldn't differentiate wrought iron from the cast iron and steel in the bucket. However, when prompted, all of them could easily explain the chemical differences between the types of iron. Cooley took this as a lesson to always focus on the practical, and how engineers could take the heaps of theoretical knowledge they had and apply that to actual engineering projects. This is the reason why I believe engineering experiences to be of the utmost importance. Even with all the research and knowledge in the world, without a practical way to apply it, it is of no use. That is why I have dedicated an entire section to the engineering experiences I have taken part in, and how those experiences have turned me into a better more insightful engineer.
 
 Create content & metadata
 ------
