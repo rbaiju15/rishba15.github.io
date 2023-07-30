@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Welcome, I'm Rishon!! Read on to find out more about this blog"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+Ever since I was young, I have always been fascinated by speed. Whether it was my first bike, scooter, or skateboard, if it had wheels, I went fast in it. As I grew older, I also discovered the vast world of motorsport, a collection of various racing and driving championship series from Formula 1 to Nascar to Class B Rally. But as I started high school, I began to wonder how I could transform this passion into a real career. I had always been interested in engineering, and as I thought more and more about it, I realized I could combine my passion for speed and engineering to create the next generation of transport vehicles. This all culminated in the summer of my junior year, when I built my very own electric racing go-kart capable of reaching speeds over 30mph. Check out my projects page to learn more about it. This blog is a culmination of all my research and work, including summaries of my go-kart build, my internship at Nazar Diesel, my fun blog series about Formula 1, and many more interesting tidbits. Enjoy!!  
 
 A data-driven personal website
 ======
