@@ -14,7 +14,7 @@ Displaying Projects
 ======
 Like many engineers, I have certain projects I want to display. To do so, this site will have integrated project portfolios. These portfolios will include detailed summaries of project work, technical research and datasheets, photos and other media, and personal insights into the daily workings of the project.
 
-Such portfolios are very important, as they can provide deep insight into what exactly I am interested in and how I approach and tackle various problems. To learn more about engineering portfolios make sure to check out this LinkedIn blog. To navigate to my portfolios, simply click the portfolio navigation button at the top of the screen and select which project you would like to view.
+Such portfolios are very important, as they can provide deep insight into what exactly I am interested in and how I approach and tackle various problems. To learn more about engineering portfolios make sure to check out this [Indeed blog](https://www.indeed.com/career-advice/career-development/what-is-portfolio-engineering). To navigate to my portfolios, simply click the portfolio navigation button at the top of the screen and select which project you would like to view.
 
 Getting started
 ======
