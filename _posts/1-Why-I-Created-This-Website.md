@@ -1,7 +1,7 @@
 ---
 title: 'Why I Created This Website'
 date: 2012-08-01
-permalink: /posts/Why-I-Created-This-Website/
+permalink: /posts/2012/08/blog-post-1/
 tags:
   - New Blog
   - Ramble
