@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef0d138b-765c-4c57-b616-1dfaadbac9f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2013-08-14-blog-post-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2013-08-14-blog-post-2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2023-08-03-blog-post-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2023-07-26-Why-I-Made-This-Blog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2023-07-28-the-need-for-speed.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2023-07-28-the-need-for-speed.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
