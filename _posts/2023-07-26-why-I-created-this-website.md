@@ -1,6 +1,6 @@
 ---
 title: 'Why I Created This Website'
-date: 2023-08-03
+date: 2023-07-26
 permalink: /posts/Why-I-Created-This-Website/
 tags:
   - New Blog
