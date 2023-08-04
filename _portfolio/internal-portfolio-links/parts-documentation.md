@@ -1,7 +1,6 @@
 ---
-title: "All Electric Go Kart Build"
-excerpt: "In this portfolio, discover how I built an all electric racing go kart capable of 30mph from scratch! <br/><img src='/images/500x300.png'>"
-collection: portfolio
+title: "Parts Documentation"
+excerpt: ""
 ---
 
-Below are  link to the various aspects of the project. There is a link for parts documentation, project management, and build process. Read on to find more about each one.
+Here you will discover all the research and planning that went into finding the parts for my go-kart. Every component, from the bolts to the motor will be broken down. You will learn not only how the parts fit together, but how each part works along with pictures and facts I learned about them along the way.
