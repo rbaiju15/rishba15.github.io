@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "All Electric Go Kart Build"
+excerpt: "In this portfolio, discover how I built an all electric racing go kart capable of 30mph from scratch! 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
