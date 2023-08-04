@@ -4,4 +4,6 @@ excerpt: "In this portfolio, discover how I built an all electric racing go kart
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Below are  link to the various aspects of the project. There is a link for parts documentation, project management, and build process. Read on to find more about each one.
+
+[Parts Documentation](/portfolio/internal-portfolio-links/parts-documentation)
