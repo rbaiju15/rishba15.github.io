@@ -48,7 +48,7 @@ To control the speed and torque of a DC motor, a controller must be used. Since 
 </details>
 <details>
 <summary>The Part I Chose</summary>
-The controller I selected was the Alltrax SR48300. It is a high amperage controller that uses a PWM to control speed. It does not have an integrated H-Bridge to control motor direction, and relies on external circuitry to do so (we will discuss that later). I chose this controller because Alltrax has a long reputation of providing high-quality controllers. Another brand I considered was Kelly, but the support resources on their website lacked compared to Alltrax, and so I settled on Alltrax. The controller can handle a max amperage of 300 amps, well above my motor's rating. However, I chose not to select a regenerative braking option due to the excess cost. The main input to the controller are the battery and motor connections, a connection from the main contactor, and connections to the control circuit (throttle and switch). Overall, I was happy with the quality and features of the Alltrax controller. 
+The controller I selected was the Alltrax SR48300. It is a high amperage controller that uses a PWM to control speed. It does not have an integrated H-Bridge to control motor direction, and relies on external circuitry to do so (we will discuss that later). I chose this controller because Alltrax has a long reputation of providing high-quality controllers. Another brand I considered was Kelly, but the support resources on their website lacked compared to Alltrax, and so I settled on Alltrax. The controller can handle a max amperage of 300 amps, well above my motor's rating. However, I chose not to select a regenerative braking option due to the excess cost. The main input to the controller are the battery and motor connections, a connection from the main contactor, and connections to the startup circuit (throttle and switch). Overall, I was happy with the quality and features of the Alltrax controller. 
 </details>
 
 </details>
@@ -58,7 +58,7 @@ The controller I selected was the Alltrax SR48300. It is a high amperage control
 
 <details>
 <summary>What is an Electrical Contactor?</summary>
-A contactor is a large device used to switch a circuit on and off. It is similar to a relay, but able to handle much higher voltages and amperages. It is often confusingly called a solenoid. There are three main components of a contactor. The first is a coil/electromagnet. This is the component that will provide the force to open and close the contactor. The next component is the enclosure, which seals and insulates the contactor. Finally, the contacts themselves. These contacts will carry current when the contactor is closed. To activate a contactor, a potential difference is created across its terminals. This energizes the electromagnet creating a magnetic field. This magnetic force created by the filed causes the contacts to physically shut, completing the circuit. You will hear a loud click when the happens. From here, current can now flow through the contactor to the rest of the circuit. A contactor is necessary because without it, the sudden surge of current could damage the controller. By allowing current to slowly build up and pass through, the contactor ensures the right amount of current flows through the circuit. To energize the contactor, the control circuit is used.
+A contactor is a large device used to switch a circuit on and off. It is similar to a relay, but able to handle much higher voltages and amperages. It is often confusingly called a solenoid. There are three main components of a contactor. The first is a coil/electromagnet. This is the component that will provide the force to open and close the contactor. The next component is the enclosure, which seals and insulates the contactor. Finally, the contacts themselves. These contacts will carry current when the contactor is closed. To activate a contactor, a potential difference is created across its terminals. This energizes the electromagnet creating a magnetic field. This magnetic force created by the filed causes the contacts to physically shut, completing the circuit. You will hear a loud click when the happens. From here, current can now flow through the contactor to the rest of the circuit. A contactor is necessary because without it, the sudden surge of current could damage the controller. By allowing current to slowly build up and pass through, the contactor ensures the right amount of current flows through the circuit. To initially energize the contactor, the startup circuit is used.
 </details>
 <details>
 <summary>The Part I Chose</summary>
@@ -76,7 +76,7 @@ A fuse is an electrical component that stops too much current from flowing throu
 </details>
 <details>
 <summary>The Part I Chose</summary>
-The part I chose is a 300A Bussmann Forklift Fuse. Since there is an option with my motor to provide 300 amps for 30 seconds, I had to choose a fuse with such a rating. This is the main fuse protecting the drive circuit. However, I also needed to integrate a smaller fuse to protect the control circuit. For this I chose a small 100A fuse. this would prevent the control circuit from burning out, thus preventing me from turning the kart on and off.
+The part I chose is a 300A Bussmann Forklift Fuse. Since there is an option with my motor to provide 300 amps for 30 seconds, I had to choose a fuse with such a rating. This is the main fuse protecting the drive circuit. However, I also needed to integrate a smaller fuse to protect the startup circuit. For this I chose a small 100A fuse. This would prevent the control circuit from burning out, thus preventing me from turning the kart on and off.
 </details>
 
 </details>
@@ -90,6 +90,7 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 </details>
 <details>
 <summary>The Part I Chose</summary>
+The resistor I chose was rated at 10W 470Ω. this resistor fit the specifications required by the Alltrax controller.
 </details>
 
 </details>
@@ -99,9 +100,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Diode?</summary>
+A diode is a semiconductor that has basically infinite resistance when current is run through it in one direction, and basically no resistance in the other direction (I say basically because nothing is perfect). It essentially acts as a gate for current. When the motor is running, the battery pack has a higher voltage rating, and thus the potential difference causes current to flow to the motor and through the open side of diode. However when the circuit is shut off, the motor still has some inductive energy. This creates a potential difference in the opposite direction causing current to flow back the other way. While this is okay when controlled (ie. when used in regenerative braking), if it is not controlled the circuit could be damaged. The diode essentially holds back this 'backwash' current. To ensure proper wiring, the diode should be wired in parallel to the motor, and should be oriented in the right direction.
 </details>
 <details>
 <summary>The Part I Chose</summary>
+I selected a 3 amp coil suppression diode for the project. Again, as with the contactor and resistor, the diode met the required specifications for the controller. To mount it, I attached it to the corresponding poles on the contactor.
 </details>
 
 </details>
@@ -111,9 +114,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Fuse Holder?</summary>
+While electrical fuses can be wired straight into a circuit, it is often not the safest idea. Fuses can get very hot when nearing their highest rated current and so could damage other components. Additionally, if not wired in properly, the flow of current may be restricted, generating excess heat. Rather, we should use fuse holders. These holders have an integrated area to hold the fuse, and connection points to the rest of the circuit. This isolates the fuse in case of failure and prevents current or voltage leakage. While not a critical electrical component, increasing the robustness of the circuit is always a good idea, and so fuse holders should be used.
 </details>
 <details>
 <summary>The Part I Chose</summary>
+Since there were two fuses, I needed two separate holders. For the startup circuit fuse, I simply found a fuse holder in the shop where I was working. However, the main drive fuse had a 'forklift' design, and thus required me to order a specialized forklift fuse holder from Amazon. 
 </details>
 
 </details>
@@ -123,9 +128,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Pot Box Throttle?</summary>
+A throttle is any device used to control the speed of a motor. For small scale electric vehicle projects, the industry standard is to use what is known as a pot-box throttle. This type of throttle has an integrated 0-5V potentiometer. When the throttle is actuated, the potentiometer is turned, thus varying the voltage the throttle sends to the controller. Additionally, the throttle often has an integrated microswitch that breaks the circuit when the throttle isn't pushed down, adding another layer of safety to the circuit.
 </details>
 <details>
 <summary>The Part I Chose</summary>
+The throttle I chose was the Curtis PB-6 throttle. It is a lever actuated pot-box throttle. I chose a lever actuated version because the go-kart frame already had an integrated pedal. Thus, by connecting the pedal with the throttle I now had a working throttle. The throttle had four wire connections to the rest of the circuit. The two pole microswitch runs to the ends of the startup circuit. The main output wires run to the controller, which is used to modulate motor speed.
 </details>
 
 </details>
@@ -135,9 +142,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is Wiring?</summary>
+Wiring is what joins the electrical components in a circuit. It is a relatively simple process, but there are some considerations that must be taken into account when wiring. First is the size of the wire. Depending on the amperage of the circuit, a wire size must be chosen. If the wire is too small, there will be more resistance, and it could damage the circuit. After that, you must understand what kind of connectors you need. There are many connectors, like spade, ring, or block connectors. Making sure you have the right equipment is very important. To create a wire, you first measure the length needed, then strip a small length of the insulating material off of each end. Then you crimp the appropriate connector to both ends before applying heat shrink wrap to the ends. 
 </details>
 <details>
 <summary>The Part I Chose</summary>
+I chose to use 4 AWG wire for my circuit. This size of wire can adequately carry the currents in my circuit. I used mainly ring connectors, but for some connections into the controller, I had to use spade connectors.
 </details>
 
 </details>
@@ -147,9 +156,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Switch?</summary>
+An on/off switch is a simple electrical component used to open or close a circuit. It is important to keep the circuit open when not in use to prevent current from flowing,, and thus a switch is very important.
 </details>
 <details>
 <summary>The Part I Chose</summary>
+I chose a very simple on/off switch which I wired into the circuit according to the wiring diagram provided with the controller.
 </details>
 
 </details>
@@ -165,9 +176,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Go-Kart Frame?</summary>
+The frame of a go-kart is very important. It holds all the components and provides a solid base for you to sit in. The frame consists of the main baseplate, the steering assembly, tires, engine mounting plate, and seat.
 </details>
 <details>
 <summary>The Part I Chose</summary>
+The frame I chose was a 1990 Manco go-kart. I found the frame on Facebook Marketplace, and after inspection, I was happy with the build quality. The frame was setup in the racing style of go kart, with a wide back and tapered front end. The integrated components were small, but the weight was quite low. Overall, it was a solid frame to build the go-kart on.
 </details>
 
 </details>
@@ -177,10 +190,9 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Steering Assembly?</summary>
+The steering assembly of a go-kart is surprisingly complicated. It all starts with the steering column. With a fixed wheel at one end, the whole column rotates with any steering input. At the end of the column, there are two 'pitman arms' which are just flat bars of metal welded to the column that stick down. Attached to these pitman arms are 'tie rods'. The tie rods attach to another set of pitman arms on the wheel assembly. So for example, when the column is turned to the right, the right tie rod will pull the right wheel in, causing it to turn right. Subsequently, the left tie rod will push the left wheel out, causing it to turn right. 
 </details>
-<details>
-<summary>The Part I Chose</summary>
-</details>
+
 
 </details>
 
@@ -189,9 +201,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What is a Gear Assembly?</summary>
+The gear assembly on a go-kart is what translates power from the motor to the wheel. Some go-karts are considered 'live-axle' where the rear axle is one long axle. So when the axle is driven, it drives both rear wheel. However, my kart has a hub-drive. This means each wheel has its own independent hub, and thus only the rear left wheel is driven. On the motor, a small sprocket is attached. A chain then runs to a larger sprocket on the rear left wheel assembly. When the motor turns it drives this chain assembly, turning the wheel. 
 </details>
 <details>
 <summary>The Part I Chose</summary>
+On my kart, there is a 15 tooth drive sprocket (the sprocket on the motor). This drives a 60 tooth driven sprocket (on the wheel) via #35 chain. This gives the kart a final transmission ratio of 4:1. 
 </details>
 
 </details>
@@ -201,21 +215,11 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 
 <details>
 <summary>What are Brakes?</summary>
+The brakes in a vehicle allow the kart to stop. In an electric vehicle, there are tow options for braking—mechanical brakes and regenerative braking. Since my kart does not have regen braking, we will only focus on mechanical brakes. There are two options for brakes on a kart this size—friction or hydraulic. Hydraulic brakes use brake fluid to aid in clamping a caliper around a brake disc, thus stopping the kart. Friction brakes simply tighten a brake shoe around a brake drum with the pressure of your foot to stop the kart. 
 </details>
 <details>
 <summary>The Part I Chose</summary>
-</details>
-
-</details>
-
-<details>
-<summary>Pedals</summary>
-
-<details>
-<summary>What are Pedals?</summary>
-</details>
-<details>
-<summary>The Part I Chose</summary>
+The Manco frame came with friction brakes. Upon inspection, we found the parts to be very old, and decided to fully replace the system with OEM parts. Looking back, it would have been a better idea to simply purchase hydraulic brakes, as they have far superior braking power. However, the brakes are not really required on my kart as I mostly use it for pleasure, and so I will save the brake upgrade for a future time.
 </details>
 
 </details>
