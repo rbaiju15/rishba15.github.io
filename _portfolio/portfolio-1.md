@@ -7,3 +7,4 @@ collection: portfolio
 Below are  link to the various aspects of the project. There is a link for parts documentation, project management, and build process. Read on to find more about each one.
 
 [Parts Documentation](/rishba15.github.io//internal-portfolio-links/parts-documentation/)
+[Build Process](/rishba15.github.io//internal-portfolio-links/build-process/)
