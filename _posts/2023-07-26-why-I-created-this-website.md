@@ -1,7 +1,7 @@
 ---
 title: 'Why I Created This Website'
 date: 2023-07-26
-permalink: /posts/Why-I-Created-This-Website/
+permalink: /posts/why-I-created-this-website/
 tags:
   - New Blog
   - Ramble
