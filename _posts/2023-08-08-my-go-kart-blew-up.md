@@ -1,6 +1,6 @@
 ---
 title: 'My Go Kart Blew Up'
-date: 2023-08-09
+date: 2023-08-08
 permalink: /posts/my-go-kart-blew-up/
 tags:
   - Failure
