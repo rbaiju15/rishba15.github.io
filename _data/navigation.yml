@@ -4,13 +4,13 @@ main:
     url: /portfolio/
         
   - title: "Blog Posts"
-    url: /year-archive/
+    url: /blog-posts/
     
   - title: "Experiences"
-    url: /cv/
+    url: /experiences/
     
-  - title: "Research"
-    url: /markdown/
+#  - title: "Research"
+#    url: /markdown/
 # - title: "Publications"
   #  url: /publications/
 
