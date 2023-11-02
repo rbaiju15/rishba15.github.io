@@ -13,8 +13,10 @@ redirect_from:
 
 Nazar Diesel Internship
 ===========
+
 What Was It?
 ------
+
 Nazar Diesel is a small diesel engine workshop based in Jessup, PA. It is run by a close family friend, Marty Nazar. My family has been friends with the Nazars for many years, and when I was younger, I used to stay at their home when my father traveled for work. Therefore, I spent much of my childhood exploring the Nazar Diesel workshop with Mark (Marty’s son). While we were too young to work with the engines and machines that came through the shop, we spent our time exploring tools, old vehicles, and scattered parts. Further, Marty made sure to set up little projects for us, like building circuits to power LEDs or exploring the basics of magnets. Even though my family moved away, we have still kept up a close relationship with the Nazars, and I often return to their home and stop by at Nazar Diesel while there. That’s why I was extremely grateful when Marty let me know that I could spend two weeks at the shop to complete a formal internship. While there, I learned the fundamentals of engines, drivetrains, and engineering. I helped out with various projects and, along the way, picked up many useful skills. My experience was in late June and early July of 2023.  Read on to find out more!!
 
 Daily Breakdowns
