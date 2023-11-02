@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Experiences"
 permalink: /experiences/
 author_profile: true
 redirect_from:
@@ -8,6 +8,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+<br></br>
 
 Nazar Diesel Internship
 ===========
