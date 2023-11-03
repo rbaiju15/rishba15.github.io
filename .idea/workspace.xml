@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef0d138b-765c-4c57-b616-1dfaadbac9f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/_pages/cv.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/cv.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio_pic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_portfolio/portfolio-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_portfolio/portfolio-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_portfolio/portfolio-2.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Rice-On's Coding/Python/Learning Python 2022" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
