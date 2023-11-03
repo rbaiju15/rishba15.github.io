@@ -1,6 +1,7 @@
 ---
 title: "All Electric Go Kart Build"
-excerpt: "In this portfolio, discover how I built an all electric racing go-kart capable of 30mph from scratch! <br/><img src='/images/portfolio_pic.png'>"
+excerpt: "In this portfolio, discover how I built an all electric racing go-kart capable of 30mph from scratch!" 
+
 collection: portfolio
 ---
 
