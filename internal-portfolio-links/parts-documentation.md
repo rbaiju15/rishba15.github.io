@@ -8,10 +8,10 @@ Here you will discover all the research and planning that went into finding the 
 
 
 
+<details>
+<summary><b>Electrical Parts</b></summary>
 
-<b>Electrical Parts</b>
-==
-<br>
+
 
 DC Motor
 ==
@@ -193,16 +193,16 @@ An on/off switch is a simple electrical component used to open or close a circui
 The Part I Chose
 -
 I chose a very simple on/off switch which I wired into the circuit according to the wiring diagram provided with the controller.
+</details>
 
 
 
 
 
 
+<details>
+<summary><b>Mechanical Parts</b></summary>
 
-
-<b>Mechanical Parts</b>
-=
 
 
 Frame
@@ -264,7 +264,7 @@ The brakes in a vehicle allow the kart to stop. In an electric vehicle, there ar
 The Part I Chose
 -
 The Manco frame came with friction brakes. Upon inspection, we found the parts to be very old, and decided to fully replace the system with OEM parts. Looking back, it would have been a better idea to simply purchase hydraulic brakes, as they have far superior braking power. However, the brakes are not really required on my kart as I mostly use it for pleasure, and so I will save the brake upgrade for a future time.
-
+</details>
 
 
 
