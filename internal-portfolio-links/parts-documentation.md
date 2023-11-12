@@ -13,8 +13,8 @@ Here you will discover all the research and planning that went into finding the 
 
 
 
-DC Motor
-==
+<h1>DC Motor</h1>
+
 
 What is a DC Motor?
 --
@@ -39,7 +39,7 @@ Simply put, a battery is a store of electrical energy. The proper term would be 
 
 The Part I Chose
 -
-To select my battery, I needed to balance cost, weight, and capacity requirements. Firstly, the batteries I chose had to be 48V. I could either directly purchase 48V batteries, or wire up lower voltage batteries in series to achieve 48V. To decide, I looked at the size and cost of batteries. Noticing 48V batteries were far to expensive, i decided to wire up 4 12V batteries in series. Once I had determined that, I had to decide what type of battery I wanted. While lithium based batteries were more powerful, their cost was a limiting factor, and so I settled on deep-cycle sealed lead acid AGM batteries. Finally, I needed to select an amp-hour rating. Batteries with larger amp-hour ratings would last longer, but I knew they would be heavier and more expensive. I eventually decided on buying 4 12V 35Ah batteries from Weize, as they both fit my specifications and were within my budget. 
+To select my battery, I needed to balance cost, weight, and capacity requirements. Firstly, the batteries I chose had to be 48V. I could either directly purchase 48V batteries, or wire up lower voltage batteries in series to achieve 48V. To decide, I looked at the size and cost of batteries. Noticing 48V batteries were far too expensive, I decided to wire up 4 12V batteries in series. Once I had determined that, I had to decide what type of battery I wanted. While lithium based batteries were more powerful, their cost was a limiting factor, and so I settled on deep-cycle sealed lead acid AGM batteries. Finally, I needed to select an amp-hour rating. Batteries with larger amp-hour ratings would last longer, but I knew they would be heavier and more expensive. I eventually decided on buying 4 12V 35Ah batteries from Weize, as they both fit my specifications and were within my budget. 
 
 
 
