@@ -11,7 +11,7 @@ Here you will discover all the research and planning that went into finding the 
 
 <b>Electrical Parts</b>
 ==
-
+<br>
 
 DC Motor
 ==
@@ -31,6 +31,7 @@ When selecting an adequate motor, there were a few considerations I had to keep 
 
 Batteries
 ==
+
 What is a Battery?
 -
 Simply put, a battery is a store of electrical energy. The proper term would be a cell, and a battery is multiple cells put together. A cell consists of an anode (the negative side), a cathode (the positive side), and a chemical mix in between. Common chemical mixes include lithium-ion or lead acid. To create electricity, electrons must flow. To do this, the battery creates a potential difference between the anode and cathode (this is what the chemical mix is for). This causes electrons to build up at the anode. Since there is an imbalance, the electrons want to go to the cathode, but are blocked by the chemical mix. However, when you apply a load to the battery, electrons can now begin to flow, creating electricity. But as electrons flow, they interact with the chemical mix, eventually causing the battery to run out of charge. To recharge the battery, current is run backwards through the battery, reversing the chemical process. We measure the potential difference across the terminals in volts, and the amount of energy the battery can provide in amp-hours or watts.
