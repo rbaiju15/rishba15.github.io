@@ -12,7 +12,7 @@ Here you will discover all the research and planning that went into finding the 
 <summary><b>Electrical Parts</b></summary>
 
 
-
+<h2></h2>
 <h1>DC Motor</h1>
 
 
@@ -24,7 +24,6 @@ A DC motor is the simplest kind of motor and has been used for decades due to th
 <h2>The Part I Chose</h2>
 
 When selecting an adequate motor, there were a few considerations I had to keep in mind. The first was the required voltage. I had already selected a 48V system, and thus could only choose motors that delivered peak power at 48V. Then, I had to select which company I wanted to purchase the motor from. After research, the company with a clear advantage was Motenergy. It delivered high quality and has a long history of creating innovative products. The next consideration was whether I wanted a brushed or brushless motor. In the end, cost was the deciding factor. While a BLDC would have been more powerful and efficient, the cost was very high. Just for the motor it would have cost me somewhere around 1000 dollars, and I would still have to buy almost 1000 dollars more in supporting electronics. The cost of the kart would have been too much. Selecting this motor taught me an important lesson on the impact cost has on engineering. While there may have been a better option, I had to work within my budget, and therefore had to settle for a slightly worse part. Engineers face such constraints everyday, and I was glad I learned this lesson now. Now that I had slected a 48V BDC motor from Motenergy, I had to find the right model. Eventually, I settled on the ME-0909, which delivered 4.8 continuous kW at 100 amps, and 15kW for 30 seconds. The motor cost $550, and I was happy with the balance of power and cost.
-a
 
 <h2></h2>
 
@@ -41,7 +40,7 @@ Simply put, a battery is a store of electrical energy. The proper term would be 
 To select my battery, I needed to balance cost, weight, and capacity requirements. Firstly, the batteries I chose had to be 48V. I could either directly purchase 48V batteries, or wire up lower voltage batteries in series to achieve 48V. To decide, I looked at the size and cost of batteries. Noticing 48V batteries were far too expensive, I decided to wire up 4 12V batteries in series. Once I had determined that, I had to decide what type of battery I wanted. While lithium based batteries were more powerful, their cost was a limiting factor, and so I settled on deep-cycle sealed lead acid AGM batteries. Finally, I needed to select an amp-hour rating. Batteries with larger amp-hour ratings would last longer, but I knew they would be heavier and more expensive. I eventually decided on buying 4 12V 35Ah batteries from Weize, as they both fit my specifications and were within my budget. 
 
 
-
+<h2></h2>
 
 
 <h1>DC Motor Controller</h1>
@@ -58,7 +57,7 @@ To control the speed and torque of a DC motor, a controller must be used. Since 
 The controller I selected was the Alltrax SR48300. It is a high amperage controller that uses a PWM to control speed. It does not have an integrated H-Bridge to control motor direction, and relies on external circuitry to do so (we will discuss that later). I chose this controller because Alltrax has a long reputation of providing high-quality controllers. Another brand I considered was Kelly, but the support resources on their website lacked compared to Alltrax, and so I settled on Alltrax. The controller can handle a max amperage of 300 amps, well above my motor's rating. However, I chose not to select a regenerative braking option due to the excess cost. The main input to the controller are the battery and motor connections, a connection from the main contactor, and connections to the startup circuit (throttle and switch). Overall, I was happy with the quality and features of the Alltrax controller. 
 
 
-
+<h2></h2>
 
 
 <h1>Electrical Contactor</h1>
@@ -75,7 +74,7 @@ A contactor is a large device used to switch a circuit on and off. It is similar
 The contactor I chose is the 200A 48V JCC-200. This contactor matched the specifications for a contactor that Alltrax outlined in their data sheet, and was available for a reasonable price. 
 
 
-
+<h2></h2>
 
 
 <h1>Fuse</h1>
@@ -91,7 +90,7 @@ A fuse is an electrical component that stops too much current from flowing throu
 The part I chose is a 300A Bussmann Forklift Fuse. Since there is an option with my motor to provide 300 amps for 30 seconds, I had to choose a fuse with such a rating. This is the main fuse protecting the drive circuit. However, I also needed to integrate a smaller fuse to protect the startup circuit. For this I chose a small 100A fuse. This would prevent the control circuit from burning out, thus preventing me from turning the kart on and off.
 
 
-
+<h2></h2>
 
 
 <h1>Pre-Charge Resistor</h1>
@@ -108,7 +107,7 @@ All controllers have built in capacitors. When a circuit is powered on, these ca
 The resistor I chose was rated at 10W 470Ω. this resistor fit the specifications required by the Alltrax controller.
 
 
-
+<h2></h2>
 
 
 <h1>Diode</h1>
@@ -125,7 +124,7 @@ A diode is a semiconductor that has basically infinite resistance when current i
 I selected a 3 amp coil suppression diode for the project. Again, as with the contactor and resistor, the diode met the required specifications for the controller. To mount it, I attached it to the corresponding poles on the contactor.
 
 
-
+<h2></h2>
 
 
 <h1>Fuse Holder</h1>
@@ -142,7 +141,7 @@ While electrical fuses can be wired straight into a circuit, it is often not the
 Since there were two fuses, I needed two separate holders. For the startup circuit fuse, I simply found a fuse holder in the shop where I was working. However, the main drive fuse had a 'forklift' design, and thus required me to order a specialized forklift fuse holder from Amazon. 
 
 
-
+<h2></h2>
 
 
 <h1>Throttle</h1>
@@ -158,7 +157,7 @@ A throttle is any device used to control the speed of a motor. For small scale e
 The throttle I chose was the Curtis PB-6 throttle. It is a lever actuated pot-box throttle. I chose a lever actuated version because the go-kart frame already had an integrated pedal. Thus, by connecting the pedal with the throttle I now had a working throttle. The throttle had four wire connections to the rest of the circuit. The two pole microswitch runs to the ends of the startup circuit. The main output wires run to the controller, which is used to modulate motor speed.
 
 
-
+<h2></h2>
 
 
 <h1>Wiring</h1>
@@ -176,7 +175,7 @@ Wiring is what joins the electrical components in a circuit. It is a relatively 
 I chose to use 4 AWG wire for my circuit. This size of wire can adequately carry the currents in my circuit. I used mainly ring connectors, but for some connections into the controller, I had to use spade connectors.
 
 
-
+<h2></h2>
 
 
 <h1>Switch</h1>
@@ -194,14 +193,14 @@ I chose a very simple on/off switch which I wired into the circuit according to 
 </details>
 
 
-
+<h2></h2>
 
 
 
 <details>
 <summary><b>Mechanical Parts</b></summary>
 
-
+<h2></h2>
 
 <h1>Frame</h1>
 
@@ -217,7 +216,7 @@ The frame of a go-kart is very important. It holds all the components and provid
 The frame I chose was a 1990 Manco go-kart. I found the frame on Facebook Marketplace, and after inspection, I was happy with the build quality. The frame was setup in the racing style of go kart, with a wide back and tapered front end. The integrated components were small, but the weight was quite low. Overall, it was a solid frame to build the go-kart on.
 
 
-
+<h2></h2>
 
 
 <h1>Steering Assembly</h1>
@@ -229,7 +228,7 @@ The frame I chose was a 1990 Manco go-kart. I found the frame on Facebook Market
 The steering assembly of a go-kart is surprisingly complicated. It all starts with the steering column. With a fixed wheel at one end, the whole column rotates with any steering input. At the end of the column, there are two 'pitman arms' which are just flat bars of metal welded to the column that stick down. Attached to these pitman arms are 'tie rods'. The tie rods attach to another set of pitman arms on the wheel assembly. So for example, when the column is turned to the right, the right tie rod will pull the right wheel in, causing it to turn right. Subsequently, the left tie rod will push the left wheel out, causing it to turn right. 
 
 
-
+<h2></h2>
 
 
 
@@ -248,7 +247,7 @@ On my kart, there is a 15 tooth drive sprocket (the sprocket on the motor). This
 
 
 
-
+<h2></h2>
 
 <h1>Brakes</h1>
 
