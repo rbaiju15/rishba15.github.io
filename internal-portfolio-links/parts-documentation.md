@@ -193,7 +193,6 @@ I chose a very simple on/off switch which I wired into the circuit according to 
 </details>
 
 
-<h2></h2>
 
 
 
