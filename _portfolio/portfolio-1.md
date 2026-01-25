@@ -3,7 +3,7 @@ title: "All Electric Go Kart Build"
 excerpt: "In this portfolio, discover how I built an all electric racing go-kart capable of 30mph from scratch!" 
 collection: portfolio
 permalink: /portfolio/GoKartBuild/
-date: 2025-04-16
+date: 2023-07-13
 tags:
   - Mechanical Engineering
   - Electrical Engineering
