@@ -346,3 +346,19 @@ table th {
 .archive__title {
   padding-top: var(--eng-space-2);
 }
+
+/* --- Title spacing fix: add padding to the container above the H1 --- */
+
+/* When the title is inside page/archive inner wraps */
+.page__inner-wrap,
+.archive__inner-wrap {
+  padding-top: calc(var(--eng-space-5) + 0.75rem);
+}
+
+/* If the theme uses a header wrapper for the title */
+.page__inner-wrap > header,
+.archive__inner-wrap > header,
+.page__header,
+.archive__header {
+  padding-top: var(--eng-space-4);
+}
