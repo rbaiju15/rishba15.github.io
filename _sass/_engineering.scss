@@ -326,3 +326,23 @@ table th {
   border-color: rgba(var(--eng-accent-rgb), 0.35);
   background: rgba(var(--eng-accent-rgb), 0.10);
 }
+
+/* --- Hard fix: ensure titles have breathing room inside the panel --- */
+
+/* Some layouts don't put the title inside a direct child header */
+.page__inner-wrap,
+.archive__inner-wrap {
+  padding-top: calc(var(--eng-space-5) + 0.75rem);
+}
+
+/* If the title is in a page header block, pad that too */
+.page__header,
+.archive__header {
+  padding-top: var(--eng-space-4);
+}
+
+/* As a backstop, pad the title itself */
+.page__title,
+.archive__title {
+  padding-top: var(--eng-space-2);
+}
