@@ -1,110 +1,36 @@
 /* ==========================================================================
    Engineering Theme Layer (site-wide)
-   Purpose: modernize look while keeping Minimal Mistakes structure intact
+   Goal: Modern engineering/product feel (clean panels, crisp type, project-forward)
    ========================================================================== */
 
+/* -----------------------------
+   1) Design tokens (easy knobs)
+   ----------------------------- */
 :root {
+  /* Accent (single source of truth) */
   --eng-accent: #2f6bff;
-  --eng-surface: #ffffff;
-  --eng-surface-2: #f6f8fb;
-  --eng-border: rgba(0, 0, 0, 0.08);
-  --eng-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  --eng-radius: 16px;
-  --eng-radius-sm: 12px;
-}
+  --eng-accent-rgb: 47, 107, 255; /* for rgba(var(--eng-accent-rgb), alpha) */
 
-/* Global polish */
-body {
-  background: var(--eng-surface-2);
-}
-
-a {
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.18em;
-}
-
-a:hover {
-  color: var(--eng-accent);
-}
-
-/* Make core content panels feel intentional */
-.page,
-.archive,
-.page__content {
-  color: $text-color;
-}
-
-/* “Card” treatment for archive items (portfolio, posts, etc.) */
-.archive__item {
-  background: var(--eng-surface);
-  border: 1px solid var(--eng-border);
-  border-radius: var(--eng-radius);
-  box-shadow: var(--eng-shadow);
-  padding: 1.1rem 1.1rem 0.9rem;
-  transition: transform 120ms ease, box-shadow 120ms ease;
-}
-
-.archive__item:hover {
-  transform: translateY(-2px);
-}
-
-/* Better grid cards */
-.grid__item .archive__item-title {
-  line-height: 1.2;
-  margin: 0.6rem 0 0.4rem;
-}
-
-/* By default, Minimal Mistakes hides excerpts in grid view.
-   For a projects-first portfolio, we want a short teaser. */
-.grid__item .archive__item-excerpt {
-  display: block;
-  margin-top: 0.4rem;
-  color: $gray;
-}
-
-/* Optional: clamp long excerpts so cards stay aligned */
-.grid__item .archive__item-excerpt {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Teaser images: make them feel like product tiles */
-.archive__item-teaser img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--eng-radius-sm);
-  border: 1px solid var(--eng-border);
-}
-
-/* A bit more breathing room in the portfolio grid specifically */
-.engineering-grid .grid__item {
-  margin-bottom: 1.6rem;
-}
-
-/* ==========================================================================
-   Engineering Theme Layer — Global Polish Pass
-   Append-only: safe overrides that apply site-wide
-   ========================================================================== */
-
-/* 1) Design tokens (easy knobs) */
-:root {
-  --eng-accent: #2f6bff;
-  --eng-accent-2: #17a2b8; /* optional secondary accent */
-  --eng-text: rgba(15, 23, 42, 0.92);
-  --eng-muted: rgba(15, 23, 42, 0.68);
+  /* Surfaces */
   --eng-surface: #ffffff;
   --eng-surface-2: #f6f8fb;
   --eng-surface-3: #eef2f7;
+
+  /* Text */
+  --eng-text: rgba(15, 23, 42, 0.92);
+  --eng-muted: rgba(15, 23, 42, 0.68);
+
+  /* Borders + shadows */
   --eng-border: rgba(15, 23, 42, 0.10);
   --eng-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
   --eng-shadow-soft: 0 8px 18px rgba(15, 23, 42, 0.08);
+
+  /* Shape */
   --eng-radius: 16px;
   --eng-radius-sm: 12px;
   --eng-radius-xs: 10px;
 
-  /* Spacing scale (use these mentally as 8px-ish steps) */
+  /* Spacing scale */
   --eng-space-1: 0.5rem;
   --eng-space-2: 0.75rem;
   --eng-space-3: 1rem;
@@ -113,13 +39,29 @@ a:hover {
   --eng-space-6: 3rem;
 }
 
-/* 2) Background + main content “panel” */
+/* -----------------------------
+   2) Global baseline polish
+   ----------------------------- */
 body {
   background: var(--eng-surface-2);
   color: var(--eng-text);
 }
 
-/* Make content feel like it sits on a clean surface */
+/* Links: always show some “accent presence” via underline color */
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(var(--eng-accent-rgb), 0.45);
+}
+
+a:hover {
+  color: var(--eng-accent);
+  text-decoration-color: rgba(var(--eng-accent-rgb), 0.85);
+}
+
+/* -----------------------------
+   3) Main content panels
+   ----------------------------- */
 .page,
 .archive {
   background: var(--eng-surface);
@@ -128,28 +70,46 @@ body {
   box-shadow: var(--eng-shadow-soft);
 }
 
-/* Add padding to the main content wrapper */
+/* This is the key fix for “title too close to bubble”:
+   give the header inside the panel its own top padding. */
+.page__inner-wrap > header,
+.archive__inner-wrap > header {
+  padding-top: var(--eng-space-3);
+}
+
+/* General padding inside panels */
 .page__inner-wrap,
 .archive__inner-wrap {
   padding: var(--eng-space-5) var(--eng-space-5);
 }
 
-/* On small screens, reduce padding */
 @media (max-width: 768px) {
   .page__inner-wrap,
   .archive__inner-wrap {
     padding: var(--eng-space-4) var(--eng-space-3);
   }
+
+  .page__inner-wrap > header,
+  .archive__inner-wrap > header {
+    padding-top: var(--eng-space-2);
+  }
 }
 
-/* 3) Typography hierarchy (modern engineering: crisp + scannable) */
+/* Make titles feel “engineered” + visibly accented */
 .page__title,
 .archive__title {
   letter-spacing: -0.02em;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+
+  /* Visible accent that does NOT depend on hover or active nav logic */
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(var(--eng-accent-rgb), 0.22);
 }
 
+/* Keep reading width comfortable */
 .page__content {
-  max-width: 72ch; /* readable line length */
+  max-width: 72ch;
 }
 
 .page__content p,
@@ -161,7 +121,9 @@ body {
 .page__content h2 {
   margin-top: var(--eng-space-6);
   padding-top: var(--eng-space-2);
-  border-top: 1px solid var(--eng-border);
+
+  /* Accent-tinted section rule */
+  border-top: 1px solid rgba(var(--eng-accent-rgb), 0.18);
   letter-spacing: -0.01em;
 }
 
@@ -170,17 +132,9 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* 4) Links (clean underline, accent on hover) */
-a {
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.18em;
-}
-
-a:hover {
-  color: var(--eng-accent);
-}
-
-/* 5) Masthead / top nav polish */
+/* -----------------------------
+   4) Masthead / nav polish
+   ----------------------------- */
 .masthead {
   background: transparent;
   border-bottom: none;
@@ -193,21 +147,36 @@ a:hover {
   box-shadow: var(--eng-shadow-soft);
   padding: var(--eng-space-2) var(--eng-space-4);
   margin-top: var(--eng-space-3);
+
+  /* Visible accent without needing “active” classes */
+  border-top: 2px solid rgba(var(--eng-accent-rgb), 0.55);
 }
 
-/* Nav links: slightly more “app-like” */
 .greedy-nav a {
   border-radius: var(--eng-radius-xs);
   padding: 0.55rem 0.75rem;
-  transition: background 120ms ease, color 120ms ease;
+  transition: background 120ms ease, color 120ms ease, box-shadow 120ms ease;
 }
 
 .greedy-nav a:hover {
-  background: var(--eng-surface-3);
+  background: rgba(var(--eng-accent-rgb), 0.08);
   color: var(--eng-text);
 }
 
-/* 6) Sidebar/profile block: turn it into a card */
+/* Site title link in the nav */
+.masthead__menu-item--lg a {
+  color: var(--eng-text);
+  text-decoration-color: rgba(var(--eng-accent-rgb), 0.30);
+}
+
+.masthead__menu-item--lg a:hover {
+  color: var(--eng-accent);
+  text-decoration-color: rgba(var(--eng-accent-rgb), 0.85);
+}
+
+/* -----------------------------
+   5) Sidebar/profile block as a card
+   ----------------------------- */
 .sidebar {
   margin-top: var(--eng-space-3);
 }
@@ -221,13 +190,15 @@ a:hover {
   padding: var(--eng-space-4);
 }
 
-/* Avatar: soften edges slightly */
+/* Avatar */
 .author__avatar img {
   border-radius: 999px;
   border: 1px solid var(--eng-border);
 }
 
-/* 7) Buttons (used across the site) */
+/* -----------------------------
+   6) Buttons
+   ----------------------------- */
 .btn,
 button,
 input[type="submit"] {
@@ -243,27 +214,41 @@ input[type="submit"]:hover {
   transform: translateY(-1px);
 }
 
-/* Optional: give primary buttons an accent style if theme uses .btn--primary */
-.btn--primary {
+/* Ensure primary buttons actually read as “primary” */
+.btn--primary,
+.btn.btn--primary {
   background: var(--eng-accent);
-  border-color: rgba(0, 0, 0, 0.0);
+  border-color: var(--eng-accent);
+  color: #fff;
+  text-decoration: none;
 }
 
-/* 8) Archive cards (portfolio/posts lists) — keep your existing rules, refine them */
+.btn--primary:hover,
+.btn.btn--primary:hover {
+  filter: brightness(0.95);
+}
+
+/* -----------------------------
+   7) Archive cards (portfolio, posts lists)
+   ----------------------------- */
 .archive__item {
   background: var(--eng-surface);
   border: 1px solid var(--eng-border);
   border-radius: var(--eng-radius);
   box-shadow: var(--eng-shadow);
   padding: var(--eng-space-4);
-  transition: transform 140ms ease, box-shadow 140ms ease;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
 }
 
 .archive__item:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+
+  /* Visible accent on interaction */
+  border-color: rgba(var(--eng-accent-rgb), 0.35);
 }
 
+/* Better card headings */
 .archive__item-title {
   letter-spacing: -0.01em;
 }
@@ -272,7 +257,37 @@ input[type="submit"]:hover {
   color: var(--eng-muted);
 }
 
-/* 9) Code blocks + tables (technical, clean) */
+/* Grid-specific adjustments (your portfolio grid) */
+.grid__item .archive__item-title {
+  line-height: 1.2;
+  margin: 0.6rem 0 0.4rem;
+}
+
+/* Show excerpt in grid view + clamp */
+.grid__item .archive__item-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 0.4rem;
+}
+
+/* Teaser images as product tiles */
+.archive__item-teaser img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--eng-radius-sm);
+  border: 1px solid var(--eng-border);
+}
+
+/* Portfolio grid spacing hook */
+.engineering-grid .grid__item {
+  margin-bottom: 1.6rem;
+}
+
+/* -----------------------------
+   8) Code blocks + tables (technical, clean)
+   ----------------------------- */
 pre,
 code {
   border-radius: var(--eng-radius-xs);
@@ -293,7 +308,9 @@ table th {
   background: var(--eng-surface-3);
 }
 
-/* 10) “Chips” (we’ll use these for project tags soon) */
+/* -----------------------------
+   9) Chips (for later: tags/filters)
+   ----------------------------- */
 .eng-chip {
   display: inline-block;
   padding: 0.35rem 0.6rem;
@@ -305,74 +322,7 @@ table th {
   line-height: 1;
 }
 
-/* --- Fix: give the page/archive title breathing room inside the panel --- */
-.page__title,
-.archive__title {
-  margin-top: 0.25rem;
-  margin-bottom: 1.25rem;
-}
-
-/* If the theme wraps the title in a header block, pad that too */
-.page__hero,
-.page__header,
-.archive__header {
-  padding-top: var(--eng-space-3);
-}
-
-/* --- Accent color usage (make it visible, not just hover) --- */
-
-/* Make the site title / header brand feel “engineered” */
-.site-title,
-.masthead__menu-item--lg a {
-  color: var(--eng-text);
-}
-.site-title:hover,
-.masthead__menu-item--lg a:hover {
-  color: var(--eng-accent);
-}
-
-/* Highlight the current page in the nav (Minimal Mistakes uses .active) */
-.greedy-nav .visible-links a.active,
-.greedy-nav .visible-links a[aria-current="page"] {
-  background: rgba(47, 107, 255, 0.10);
-  border: 1px solid rgba(47, 107, 255, 0.25);
-  color: var(--eng-text);
-}
-
-/* Make headings feel “technical”: subtle accent rule */
-.page__content h2 {
-  border-top: 1px solid rgba(47, 107, 255, 0.22);
-}
-
-/* Subtle accent on links by default (still readable) */
-.page__content a {
-  color: var(--eng-text);
-  text-decoration-color: rgba(47, 107, 255, 0.45);
-}
-.page__content a:hover {
-  color: var(--eng-accent);
-  text-decoration-color: rgba(47, 107, 255, 0.80);
-}
-
-/* Card hover gets an accent outline */
-.archive__item:hover {
-  border-color: rgba(47, 107, 255, 0.35);
-}
-
-/* Buttons: make primary really look primary even if theme defaults differ */
-.btn--primary,
-.btn.btn--primary {
-  background: var(--eng-accent);
-  border-color: var(--eng-accent);
-  color: #fff;
-}
-.btn--primary:hover,
-.btn.btn--primary:hover {
-  filter: brightness(0.95);
-}
-
-/* Optional: add an accent “pill” for chips if you use them */
 .eng-chip--accent {
-  border-color: rgba(47, 107, 255, 0.35);
-  background: rgba(47, 107, 255, 0.10);
+  border-color: rgba(var(--eng-accent-rgb), 0.35);
+  background: rgba(var(--eng-accent-rgb), 0.10);
 }
