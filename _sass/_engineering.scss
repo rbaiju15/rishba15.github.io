@@ -82,3 +82,225 @@ a:hover {
 .engineering-grid .grid__item {
   margin-bottom: 1.6rem;
 }
+
+/* ==========================================================================
+   Engineering Theme Layer — Global Polish Pass
+   Append-only: safe overrides that apply site-wide
+   ========================================================================== */
+
+/* 1) Design tokens (easy knobs) */
+:root {
+  --eng-accent: #2f6bff;
+  --eng-accent-2: #17a2b8; /* optional secondary accent */
+  --eng-text: rgba(15, 23, 42, 0.92);
+  --eng-muted: rgba(15, 23, 42, 0.68);
+  --eng-surface: #ffffff;
+  --eng-surface-2: #f6f8fb;
+  --eng-surface-3: #eef2f7;
+  --eng-border: rgba(15, 23, 42, 0.10);
+  --eng-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+  --eng-shadow-soft: 0 8px 18px rgba(15, 23, 42, 0.08);
+  --eng-radius: 16px;
+  --eng-radius-sm: 12px;
+  --eng-radius-xs: 10px;
+
+  /* Spacing scale (use these mentally as 8px-ish steps) */
+  --eng-space-1: 0.5rem;
+  --eng-space-2: 0.75rem;
+  --eng-space-3: 1rem;
+  --eng-space-4: 1.5rem;
+  --eng-space-5: 2rem;
+  --eng-space-6: 3rem;
+}
+
+/* 2) Background + main content “panel” */
+body {
+  background: var(--eng-surface-2);
+  color: var(--eng-text);
+}
+
+/* Make content feel like it sits on a clean surface */
+.page,
+.archive {
+  background: var(--eng-surface);
+  border: 1px solid var(--eng-border);
+  border-radius: var(--eng-radius);
+  box-shadow: var(--eng-shadow-soft);
+}
+
+/* Add padding to the main content wrapper */
+.page__inner-wrap,
+.archive__inner-wrap {
+  padding: var(--eng-space-5) var(--eng-space-5);
+}
+
+/* On small screens, reduce padding */
+@media (max-width: 768px) {
+  .page__inner-wrap,
+  .archive__inner-wrap {
+    padding: var(--eng-space-4) var(--eng-space-3);
+  }
+}
+
+/* 3) Typography hierarchy (modern engineering: crisp + scannable) */
+.page__title,
+.archive__title {
+  letter-spacing: -0.02em;
+}
+
+.page__content {
+  max-width: 72ch; /* readable line length */
+}
+
+.page__content p,
+.page__content li {
+  line-height: 1.7;
+  color: var(--eng-text);
+}
+
+.page__content h2 {
+  margin-top: var(--eng-space-6);
+  padding-top: var(--eng-space-2);
+  border-top: 1px solid var(--eng-border);
+  letter-spacing: -0.01em;
+}
+
+.page__content h3 {
+  margin-top: var(--eng-space-5);
+  letter-spacing: -0.01em;
+}
+
+/* 4) Links (clean underline, accent on hover) */
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--eng-accent);
+}
+
+/* 5) Masthead / top nav polish */
+.masthead {
+  background: transparent;
+  border-bottom: none;
+}
+
+.masthead__inner-wrap {
+  background: var(--eng-surface);
+  border: 1px solid var(--eng-border);
+  border-radius: var(--eng-radius);
+  box-shadow: var(--eng-shadow-soft);
+  padding: var(--eng-space-2) var(--eng-space-4);
+  margin-top: var(--eng-space-3);
+}
+
+/* Nav links: slightly more “app-like” */
+.greedy-nav a {
+  border-radius: var(--eng-radius-xs);
+  padding: 0.55rem 0.75rem;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.greedy-nav a:hover {
+  background: var(--eng-surface-3);
+  color: var(--eng-text);
+}
+
+/* 6) Sidebar/profile block: turn it into a card */
+.sidebar {
+  margin-top: var(--eng-space-3);
+}
+
+.author__content,
+.author__urls-wrapper {
+  background: var(--eng-surface);
+  border: 1px solid var(--eng-border);
+  border-radius: var(--eng-radius);
+  box-shadow: var(--eng-shadow-soft);
+  padding: var(--eng-space-4);
+}
+
+/* Avatar: soften edges slightly */
+.author__avatar img {
+  border-radius: 999px;
+  border: 1px solid var(--eng-border);
+}
+
+/* 7) Buttons (used across the site) */
+.btn,
+button,
+input[type="submit"] {
+  border-radius: var(--eng-radius-xs);
+  border: 1px solid var(--eng-border);
+  box-shadow: none;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  transform: translateY(-1px);
+}
+
+/* Optional: give primary buttons an accent style if theme uses .btn--primary */
+.btn--primary {
+  background: var(--eng-accent);
+  border-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 8) Archive cards (portfolio/posts lists) — keep your existing rules, refine them */
+.archive__item {
+  background: var(--eng-surface);
+  border: 1px solid var(--eng-border);
+  border-radius: var(--eng-radius);
+  box-shadow: var(--eng-shadow);
+  padding: var(--eng-space-4);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+}
+
+.archive__item-title {
+  letter-spacing: -0.01em;
+}
+
+.archive__item-excerpt {
+  color: var(--eng-muted);
+}
+
+/* 9) Code blocks + tables (technical, clean) */
+pre,
+code {
+  border-radius: var(--eng-radius-xs);
+}
+
+pre {
+  border: 1px solid var(--eng-border);
+  background: var(--eng-surface-3);
+}
+
+table {
+  border: 1px solid var(--eng-border);
+  border-radius: var(--eng-radius-xs);
+  overflow: hidden;
+}
+
+table th {
+  background: var(--eng-surface-3);
+}
+
+/* 10) “Chips” (we’ll use these for project tags soon) */
+.eng-chip {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--eng-border);
+  background: var(--eng-surface-3);
+  color: var(--eng-text);
+  font-size: 0.85em;
+  line-height: 1;
+}
