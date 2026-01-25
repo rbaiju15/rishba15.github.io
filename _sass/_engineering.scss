@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Engineering Theme Layer (site-wide)
+   Purpose: modernize look while keeping Minimal Mistakes structure intact
+   ========================================================================== */
+
+:root {
+  --eng-accent: #2f6bff;
+  --eng-surface: #ffffff;
+  --eng-surface-2: #f6f8fb;
+  --eng-border: rgba(0, 0, 0, 0.08);
+  --eng-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --eng-radius: 16px;
+  --eng-radius-sm: 12px;
+}
+
+/* Global polish */
+body {
+  background: var(--eng-surface-2);
+}
+
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--eng-accent);
+}
+
+/* Make core content panels feel intentional */
+.page,
+.archive,
+.page__content {
+  color: $text-color;
+}
+
+/* “Card” treatment for archive items (portfolio, posts, etc.) */
+.archive__item {
+  background: var(--eng-surface);
+  border: 1px solid var(--eng-border);
+  border-radius: var(--eng-radius);
+  box-shadow: var(--eng-shadow);
+  padding: 1.1rem 1.1rem 0.9rem;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-2px);
+}
+
+/* Better grid cards */
+.grid__item .archive__item-title {
+  line-height: 1.2;
+  margin: 0.6rem 0 0.4rem;
+}
+
+/* By default, Minimal Mistakes hides excerpts in grid view.
+   For a projects-first portfolio, we want a short teaser. */
+.grid__item .archive__item-excerpt {
+  display: block;
+  margin-top: 0.4rem;
+  color: $gray;
+}
+
+/* Optional: clamp long excerpts so cards stay aligned */
+.grid__item .archive__item-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Teaser images: make them feel like product tiles */
+.archive__item-teaser img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--eng-radius-sm);
+  border: 1px solid var(--eng-border);
+}
+
+/* A bit more breathing room in the portfolio grid specifically */
+.engineering-grid .grid__item {
+  margin-bottom: 1.6rem;
+}
