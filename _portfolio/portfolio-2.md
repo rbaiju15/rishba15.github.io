@@ -18,6 +18,12 @@ This project was the culmination of all the lessons I learned in CMU's 15-112 Fu
 ## Why it matters
 I truly believe application is the only way to prove your learning, and I think this project represents the culmination of my work over one semester. While it certainly has a long way to go, I think that represents my continued commitment to learning computer science and improving my skills.
 
+## Try it out
+Below is an interactive window you can play my game in. Give it a try!
+<iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/dodgerBluePanda171633/embed"> 
+ </iframe>
+ 
 ## Tools / Skills
 - Python
 - Data Structures
