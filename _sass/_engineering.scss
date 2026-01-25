@@ -304,3 +304,75 @@ table th {
   font-size: 0.85em;
   line-height: 1;
 }
+
+/* --- Fix: give the page/archive title breathing room inside the panel --- */
+.page__title,
+.archive__title {
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* If the theme wraps the title in a header block, pad that too */
+.page__hero,
+.page__header,
+.archive__header {
+  padding-top: var(--eng-space-3);
+}
+
+/* --- Accent color usage (make it visible, not just hover) --- */
+
+/* Make the site title / header brand feel “engineered” */
+.site-title,
+.masthead__menu-item--lg a {
+  color: var(--eng-text);
+}
+.site-title:hover,
+.masthead__menu-item--lg a:hover {
+  color: var(--eng-accent);
+}
+
+/* Highlight the current page in the nav (Minimal Mistakes uses .active) */
+.greedy-nav .visible-links a.active,
+.greedy-nav .visible-links a[aria-current="page"] {
+  background: rgba(47, 107, 255, 0.10);
+  border: 1px solid rgba(47, 107, 255, 0.25);
+  color: var(--eng-text);
+}
+
+/* Make headings feel “technical”: subtle accent rule */
+.page__content h2 {
+  border-top: 1px solid rgba(47, 107, 255, 0.22);
+}
+
+/* Subtle accent on links by default (still readable) */
+.page__content a {
+  color: var(--eng-text);
+  text-decoration-color: rgba(47, 107, 255, 0.45);
+}
+.page__content a:hover {
+  color: var(--eng-accent);
+  text-decoration-color: rgba(47, 107, 255, 0.80);
+}
+
+/* Card hover gets an accent outline */
+.archive__item:hover {
+  border-color: rgba(47, 107, 255, 0.35);
+}
+
+/* Buttons: make primary really look primary even if theme defaults differ */
+.btn--primary,
+.btn.btn--primary {
+  background: var(--eng-accent);
+  border-color: var(--eng-accent);
+  color: #fff;
+}
+.btn--primary:hover,
+.btn.btn--primary:hover {
+  filter: brightness(0.95);
+}
+
+/* Optional: add an accent “pill” for chips if you use them */
+.eng-chip--accent {
+  border-color: rgba(47, 107, 255, 0.35);
+  background: rgba(47, 107, 255, 0.10);
+}
