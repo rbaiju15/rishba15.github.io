@@ -13,13 +13,11 @@ highlights:
 ---
 
 ## What it is
-This project demonstrates a small, *interactive* engineering tool embedded directly into a portfolio card and page.
+This project was the culmination of all the lessons I learned in CMU's 15-112 Fundamentals of Computer Science course. After extensive work with Python to understand data structures, coding essentials, and efficiency, I was able to put together this project in about a week.
 
 ## Why it matters
-Engineering portfolios should show **how you think**—not just screenshots. This interactive element lets someone explore the concept in seconds.
+I truly believe application is the only way to prove your learning, and I think this project represents the culmination of my work over one semester. While it certainly has a long way to go, I think that represents my continued commitment to learning computer science and improving my skills.
 
 ## Tools / Skills
-- JavaScript (vanilla)
-- HTML/CSS
-- Data visualization (lightweight)
-- Engineering intuition + communication
+- Python
+- Data Structures

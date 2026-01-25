@@ -1,8 +1,17 @@
 ---
 title: "All Electric Go Kart Build"
 excerpt: "In this portfolio, discover how I built an all electric racing go-kart capable of 30mph from scratch!" 
-
 collection: portfolio
+permalink: /portfolio/GoKartBuild/
+date: 2025-04-16
+tags:
+  - Mechanical Engineering
+  - Electrical Engineering
+  - Speed
+highlights:
+  - "Custom Wiring Harnesses"
+  - "Welding and Fabricating Brake Linkages"
+  - "Gas to Electric"
 ---
 
 Below are  links to the various aspects of the project. There is a link for parts documentation, project management, and build process. Read on to find more about each one.
