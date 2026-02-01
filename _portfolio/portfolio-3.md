@@ -18,7 +18,7 @@ We were tasked to try and build Crossy Road in just one hour using AI. A tough t
 
 ## See It For Yourself
 Below is the link to the Github repository where all the code is stored, take a look!
-https://github.com/rbaiju151/1HourCrossyRoadChallenge
+[1 Hour Crossy Road Challenge](https://github.com/rbaiju151/1HourCrossyRoadChallenge)
  
 ## Tools / Skills
 - Python
