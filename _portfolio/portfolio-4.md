@@ -19,7 +19,7 @@ Using some simple API's and AI, I built a simple web app that helps you see when
 ## See It For Yourself
 Below is a link to the website (which is public and hosted on Streamlit) or go check out the Github repository to see the code (you will need your own API key for CurrencyAPI if you want to run it this way)
 <br>
-<a href="currensee.streamlit.app" target="_blank" rel="noopener noreferrer">
+<a href="https://currensee.streamlit.app" target="_blank" rel="noopener noreferrer">
     Currensee App
 </a>
 <br>
