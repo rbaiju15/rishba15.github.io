@@ -23,7 +23,7 @@ Below is a link to the website (which is public and hosted on Streamlit) or go c
     Currensee App
 </a>
 <br>
-<a href="[currensee.streamlit.app](https://github.com/rbaiju151/CurrenseeHW3)" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/rbaiju151/CurrenseeHW3" target="_blank" rel="noopener noreferrer">
     Currensee Github Repo
 </a>
  
