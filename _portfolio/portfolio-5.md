@@ -19,7 +19,7 @@ Using some simple free online tools like Render, Poostgres, and Streamlit I was 
 ## See It For Yourself
 Below is a link to the website (which is public and hosted on Streamlit). If you want to go check out the Github repository to see the code, I have included that link as well.
 <br>
-<a href="https://currensee.internshiptracker.app" target="_blank" rel="noopener noreferrer">
+<a href="https://internshiptracker.streamlit.app" target="_blank" rel="noopener noreferrer">
     Internship Tracker
 </a>
 <br>
